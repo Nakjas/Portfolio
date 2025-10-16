@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目一：电商移动应用</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition-colors">Jiayin Han</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#work" class="text-gray-600 hover:text-indigo-600 nav-link-underline">Portfolio</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-indigo-600 nav-link-underline">About Me</a>
+                    <a href="index.html#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-all duration-300">Contact Me</a>
+                </nav>
+                 <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+             <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="index.html#work" class="block py-2 text-gray-600 hover:text-indigo-600">Portfolio</a>
+                <a href="index.html#about" class="block py-2 text-gray-600 hover:text-indigo-600">About Me</a>
+                <a href="index.html#contact" class="block mt-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 text-center">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+            <a href="index.html#work" class="text-indigo-600 hover:underline mb-8 inline-block">&larr; Back</a>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Transparency Design for AliPay</h1>
+            <img src="image/Signupinterface.png" alt="screenshot of the New designed Alipay Sign up Interface" class="Signupinterface_full">
+            <div class="prose max-w-none text-gray-700 leading-relaxed text-lg">
+                <p>The original Alipay sign-up page was quite plain, offering only a single link to all the terms and conditions. That link led to a text-heavy webpage, which made it difficult for users to understand how their personal information would be used.</p>
+                <h3 class="text-2xl font-bold mt-8 mb-4">Goal</h3>
+                <p>I redesigned Alipay’s registration interface, simplifying the dense legal terms into a clear and user-friendly format that helps users easily understand what types of personal information the app collects.</p>
+            </div>
+            <a href ="https://www.figma.com/design/ZE1xQVphwgVu5WwkAU3Ssu/Project-3_Process-Work?node-id=215-1200&p=f&t=RJImtyVrd9oPPS3P-0" class ="interacprotoalipay">Interactive Prototype</a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p class="text-gray-400">&copy; 2025 Jiayin Han. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

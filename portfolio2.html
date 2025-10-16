@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目二：智能家居控制面板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition-colors">Jiayin Han</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#work" class="text-gray-600 hover:text-indigo-600 nav-link-underline">Portfolio</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-indigo-600 nav-link-underline">About Me</a>
+                    <a href="index.html#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-all duration-300">Contact Me</a>
+                </nav>
+                 <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+             <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="index.html#work" class="block py-2 text-gray-600 hover:text-indigo-600">Portfolio</a>
+                <a href="index.html#about" class="block py-2 text-gray-600 hover:text-indigo-600">About Me</a>
+                <a href="index.html#contact" class="block mt-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 text-center">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+            <a href="index.html#work" class="text-indigo-600 hover:underline mb-8 inline-block">&larr; Back</a>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Build up a Searching Website by using Third-Party API</h1>
+            <img src="image/filter111.png" alt="searching games by using filter" class="w-full rounded-lg shadow-lg mb-8">
+            <div class="prose max-w-none text-gray-700 leading-relaxed text-lg">
+                <p>The core purpose of this project, Game Nexus, is to build an interactive web application that effectively leverages the RAWG third-party API to provide users with essential gaming information and detailed evaluation metrics. This website is designed around two distinct modes of interaction to maximize efficiency: Users can utilize the filter interface (Genre and Year) to easily explore and discover new titles across broad categories, transforming the search page into an interactive discovery tool. Alternatively, they can use the precise search function to find a specific game and quickly gain a comprehensive impression through key details like release year, Metascore, and developer information. Ultimately, the system design prioritizes enhancing the user's ability to evaluate and discover games efficiently by presenting dynamic API data in a clear, actionable manner.</p>
+                
+                <h3 class="portfolio_subtitle">Detailed Design Process</h3>
+                <div class="space-y-8">
+                    <div class="p2processcontainer">
+                        <h4 class="p2pt">IA & Wireframing</h4>
+                        <p>When designing the mid-fid, I determined that a range could be defined using “genre” and “time,” and all related games could be retrieved.</p>
+                        <img src="image/midfidelity_game.png" class="p2pp1" alt="mid-fidelity wireframe of the searching page">
+                    </div>
+                    <div class="p2processcontainer">
+                        <h4 class="p2pt">Visual Design & Prototyping</h4>
+                        <p>Visually, we adopted a clean, modern style. We also made appropriate modifications to the title text to better align with the game's futuristic aesthetic.</p>
+                        <img src="image/highfidelity_game.png" class="p2pp2" alt="The final high-fidelity prototype of the searching page">
+                    </div>
+                    <div class="p2processcontainer">
+                        <h4 class="p2pt">Testing & Iteration</h4>
+                        <p>After several rounds of testing, this is the final detailed game search result that sets the tone. It includes the most crucial details—the specific release date and media scores—giving users a general understanding of the game. It also features a description outlining the gameplay and related worldview.</p>
+                        <img src="image/search1111.png" class="p2pp3" alt="Another searching method: filtering">
+                    </div>
+                    <a href ="https://nakjas.github.io/Project1/" class ="apiwebsite">Game Nexus</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p class="text-gray-400">&copy; 2025 Jiayin Han. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

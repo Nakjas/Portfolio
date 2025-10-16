@@ -1,0 +1,356 @@
+body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* === 头部导航栏 === */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 1rem 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+.nav-link {
+    color: #4b5563;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: #4f46e5;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4f46e5;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.contact-button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #4338ca;
+}
+
+.mobile-menu-wrapper {
+    display: block;
+}
+@media (min-width: 768px) {
+    .mobile-menu-wrapper {
+        display: none;
+    }
+}
+
+.mobile-menu-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-menu {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.mobile-menu {
+    margin-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.mobile-contact-button {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background-color: #4f46e5;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* === 主要内容 === */
+.main-content, .about-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.project-brief {
+    color: #6b7280;
+    margin: 0 0 1rem 0;
+}
+
+.project-link {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.main-footer {
+    background-color: #1f2937;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-text {
+    color: #9ca3af;
+    text-align: center;
+}
+
+/* === 弹窗 === */
+.project-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.project-modal-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-close {
+    width: 2rem;
+    height: 2rem;
+    color: #6b7280;
+}
+
+.modal-title {
+    font-size: 1.875rem;
+    margin: 0 0 1rem 0;
+}
+
+.modal-image {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.prose {
+    line-height: 1.7;
+    color: #374151;
+}
+
+.prose h3 {
+    margin-top: 2rem;
+}
+
+.aboutme {
+    padding: 4rem 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.aboutme-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.aboutme-text {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.Signupinterface_full {
+    width: 40%;
+    min-width: 200px;
+    margin: 2rem 30%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.portfolio_subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 6rem 0 6rem 0;
+}
+
+.p2processcontainer {
+    margin-bottom: 10%;
+}
+
+.p2pt {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+a.interacprotoalipay {
+    color: #007BFF;
+    text-decoration: underline;
+    margin: 30px 0;
+}
+
+a.interacprotoalipay:hover {
+    color: purple;
+}
+
+a.apiwebsite {
+    color: #007BFF;
+    text-decoration: underline;
+    margin: 30px 0;
+}
+
+a.apiwebsite:hover {
+    color: purple;
+}
+
+.text-4xl {
+    margin-bottom: 1.5ram;
+}
