@@ -40,29 +40,50 @@
     <main class="container mx-auto px-6 py-12 md:py-20">
         <div class="max-w-4xl mx-auto">
             <a href="index.html#work" class="text-indigo-600 hover:underline mb-8 inline-block">&larr; Back</a>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Build up a Searching Website by using Third-Party API</h1>
-            <img src="image/filter111.png" alt="searching games by using filter" class="w-full rounded-lg shadow-lg mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Tableau Dashboard - Data Visualization</h1>
+            <img src="image/interface4.png" alt="searching games by using filter" class="w-full rounded-lg shadow-lg mb-8">
             <div class="prose max-w-none text-gray-700 leading-relaxed text-lg">
-                <p>The core purpose of this project, Game Nexus, is to build an interactive web application that effectively leverages the RAWG third-party API to provide users with essential gaming information and detailed evaluation metrics. This website is designed around two distinct modes of interaction to maximize efficiency: Users can utilize the filter interface (Genre and Year) to easily explore and discover new titles across broad categories, transforming the search page into an interactive discovery tool. Alternatively, they can use the precise search function to find a specific game and quickly gain a comprehensive impression through key details like release year, Metascore, and developer information. Ultimately, the system design prioritizes enhancing the user's ability to evaluate and discover games efficiently by presenting dynamic API data in a clear, actionable manner.</p>
+                <p>Ferrari’s long championship drought has become a running joke among Formula 1 fans. This Tableau dashboard explores the gap between Ferrari’s competitive potential and actual race outcomes. Through interactive views of drivers, seasons, and races, users can compare qualifying strength, points accumulation, and positional change, revealing moments where apparent advantages fail to convert into championship success.</p>
                 
                 <h3 class="portfolio_subtitle">Detailed Design Process</h3>
                 <div class="space-y-8">
                     <div class="p2processcontainer">
-                        <h4 class="p2pt">IA & Wireframing</h4>
-                        <p>When designing the mid-fid, I determined that a range could be defined using “genre” and “time,” and all related games could be retrieved.</p>
-                        <img src="image/midfidelity_game.png" class="p2pp1" alt="mid-fidelity wireframe of the searching page">
+                        <h4 class="p2pt">Idea & Data</h4>
+                        <p>My idea started from a video displays the number of fourth-place finishes achieved by all F1 drivers in races, qualifying sessions, and practice sessions since the year 2000. I saw this as a good entry point, so I tracked down a detailed F1 data CSV file on the internet.</p>
+                        <img src="image/4data.png" class="p2pp1" alt="mid-fidelity wireframe of the searching page">
+                        <br>
                     </div>
                     <div class="p2processcontainer">
-                        <h4 class="p2pt">Visual Design & Prototyping</h4>
-                        <p>Visually, we adopted a clean, modern style. We also made appropriate modifications to the title text to better align with the game's futuristic aesthetic.</p>
-                        <img src="image/highfidelity_game.png" class="p2pp2" alt="The final high-fidelity prototype of the searching page">
+                        <h4 class="p2pt">Data cleaning</h4>
+                        <p>Despite the data being highly detailed, the creator deliberately categorized different sets of information into numerous separate CSV files. I therefore prioritized identifying the data I wanted to display: change in position (from starting grid to race result), pole to win, and points comparison between selected drivers and the World Drivers' Championship. Merging data from different files into a single CSV significantly reduced the number of calculation fields I needed to set up in Tableau.</p>
+                        <img src="image/4datacleaning.png" class="p2pp2" alt="The final high-fidelity prototype of the searching page">
+                        <br>
                     </div>
                     <div class="p2processcontainer">
-                        <h4 class="p2pt">Testing & Iteration</h4>
-                        <p>After several rounds of testing, this is the final detailed game search result that sets the tone. It includes the most crucial details—the specific release date and media scores—giving users a general understanding of the game. It also features a description outlining the gameplay and related worldview.</p>
-                        <img src="image/search1111.png" class="p2pp3" alt="Another searching method: filtering">
+                        <h4 class="p2pt">Result of Data Cleaning</h4>
+                        <p>Over ten CVS files were consolidated into four, including one that was manually written by myself.</p>
+                        <img src="image/4datacleaningresult.png" class="p2pp3" alt="Another searching method: filtering">
+                        <br>
                     </div>
-                    <a href ="https://nakjas.github.io/Project1/" class ="apiwebsite">Game Nexus</a>
+                    <div class="p2processcontainer">
+                        <h4 class="p2pt">Chart Visualization</h4>
+                        <p>This one of the Chart visulization drafts. I choosed Gnatt Chart to displaying the "Delta" change of the position. <br>> Red referring gainning position (Ferrari' signature color is red.) <br>> Green referring losing position.</p>
+                        <img src="image/4lowfid.jpg" class="p2pp3" alt="Another searching method: filtering">
+                        <br>
+                    </div>
+                    <div class="p2processcontainer">
+                        <h4 class="p2pt">Layout Design for Dashboard</h4>
+                        <p>During dashboard design, I discovered that a crucial feature couldn't be implemented within a single action filter. This forced me to abandon the initial horizontal layout and switch to a vertical one instead.</p>
+                        <img src="image/4layout.jpg" class="p2pp3" alt="Another searching method: filtering">
+                        <img src="image/4process.png" class="p2pp3" alt="Another searching method: filtering">
+                        <br>
+                    </div>
+                    <div class="p2processcontainer">
+                        <h4 class="p2pt">Final Dashaboard Design</h4>
+                        <img src="image/4fullview.png" class="p2pp3" alt="Another searching method: filtering">
+                    </div>
+                    <br>
+                    <a href ="https://public.tableau.com/views/FerrariWDCGap/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class ="apiwebsite">Tableau - The Ferrari Post-Schumacher Gap: A Story of Lost World Driver Championship.</a>
                 </div>
             </div>
         </div>
